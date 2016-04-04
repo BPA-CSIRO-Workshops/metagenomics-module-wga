@@ -124,7 +124,7 @@ velveth A7A-59 59 -fasta data/A7A_processed.fasta
 \end{steps}
 
 \begin{steps}
-Then run velvetg to construct the de Bruijn graph. The "- exp_cov auto" parameter indicates to the software that the sequence coverage is considered uniform across the submitted set and that the expected coverage (i.e. number of reads per sequence) should be the median coverage value:
+Then run velvetg to construct the de Bruijn graph. The "- exp\_cov auto" parameter indicates to the software that the sequence coverage is considered uniform across the submitted set and that the expected coverage (i.e. number of reads per sequence) should be the median coverage value:
 \begin{lstlisting}
 velvetg A7A-59 –exp_cov auto
 \end{lstlisting}
@@ -152,7 +152,7 @@ grep -c ">" meta-velvetg.contigs.fa
 \end{steps}
 
 It shows that the sequences had been assembled in 9,182 contigs of an average length equal to about 1,230 nucleotides. The longest contigs contains 95,305 nucleotides. The N50 line indicates that half of the nucleotides are comprised in the first 275 longest contigs and that the 275th contigs is 9,145 nucleotides long.
-Comparing these stats to the one obtained before assembly also reveal that the number of nucleotides involved in the assembly represents only slightly more than 0.5\% of the nucleotides submitted. This reflects, of course, the amount of overlapping sequences identified by Velvet and MetaVelvet. This also explains the reduction of the number of ambiguous base (N_count).
+Comparing these stats to the one obtained before assembly also reveal that the number of nucleotides involved in the assembly represents only slightly more than 0.5\% of the nucleotides submitted. This reflects, of course, the amount of overlapping sequences identified by Velvet and MetaVelvet. This also explains the reduction of the number of ambiguous base (N\_count).
 
 \begin{warning}
 Changing the k-mer value can have a dramatic effect on the quality of the assembly. Reducing the k-mer to 31 for example yields the following statistics:
